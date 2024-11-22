@@ -50,7 +50,7 @@ export default function Viewcart() {
                 {cart.map((product, index) => (
                     <div className="cart-product" key={index}>
                         <div className="cart-img">
-                            <img src={`/${product.Image}`} alt={product.Name} />
+                            <img src={`${process.env.PUBLIC_URL}/${product.Image}`} alt={product.Name} />
                         </div>
                         <div className="cart-content">
                             <h2 className="name">{product.Name}</h2>

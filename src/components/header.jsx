@@ -13,7 +13,7 @@ export default function Header({ products, cart }) {
     <div className="header-container">
       <Link to={"/"}>
         <div className="logo">
-          <img src={`/Images/RUSHIK LOGO 732G.png`} alt="Logo" />
+          <img src={`${process.env.PUBLIC_URL}/Images/RUSHIK LOGO 732G.png`} alt="Logo" />
         </div>
       </Link>
 

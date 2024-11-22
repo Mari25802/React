@@ -48,13 +48,15 @@ const addCart=(products)=>
             <div className="box" key={index}>
               <Link to={`/Product/${productCategory.Category}`}>
                 <div className="image">
-                  <img src={`${productCategory.Image}`} alt={productCategory.Category} />
+                  <img src={`${process.env.PUBLIC_URL}/${productCategory.Image}`} alt={productCategory.Category} />
                 </div>
                 <h2>{productCategory.Category}</h2>
               </Link>
             </div>
+            
           ))}
         </div>
+        
       )}
 
       {/* Show filtered products when search term is present */}
@@ -65,7 +67,7 @@ const addCart=(products)=>
               <div className="box" key={index}>
                 {/* <Link to={`/Product/${product.Category}`}> */}
                   <div className="image">
-                    <img src={`${product.Image}`} alt={product.Name} />
+                    <img src={`${process.env.PUBLIC_URL}/${product.Image}`} alt={product.Name} />
                   </div>
                   <h2>{truncateName(product.Name ,18)}</h2>
                   <p>Rs: {product.Price}</p>
@@ -77,6 +79,7 @@ const addCart=(products)=>
             <p>No products found</p>
           )}
         </div>
+        
       )}
     </div>
   );

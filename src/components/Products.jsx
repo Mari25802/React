@@ -17,6 +17,7 @@ export default function Products({ products }) {
   const selectedCategory = products.filter((item) => item.Category === Category);
 
   const banner=selectedCategory[0].banner;
+  console.log("bann",banner)
 
   console.log("bann",banner)
   const filteredProducts = selectedCategory.length
@@ -32,14 +33,14 @@ export default function Products({ products }) {
     <div className="product-container">
         {banner && selectedCategory.map((bann)=>(
             <div className="banner">
-            <img src={`/${banner}`} alt="" />
+            <img src={`${process.env.PUBLIC_URL}/${banner}`} alt="" />
         </div>
         ))}
       {filteredProducts.length > 0 ? (
         filteredProducts.map((product, index) => (
           <div className="product" key={index}>
             <div className="img">
-              <img src={`/${product.Image}`} alt={product.Name} />
+              <img src={`${process.env.PUBLIC_URL}/${product.Image}`} alt={product.Name} />
             </div>
             <div className="content">
               <h1>{truncateName(product.Name, 25)}</h1>
