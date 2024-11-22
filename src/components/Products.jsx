@@ -5,7 +5,7 @@ import { cartContext } from "./CartContext";
 import { useSearch } from "./SearchContext";
 
 export default function Products({ products }) {
-  const { cart, setCart } = useContext(cartContext); // Access cart state
+  const {  setCart } = useContext(cartContext); // Access cart state
   const { search } = useSearch(); // Access search term
   const { Category } = useParams(); // Get category from URL
 

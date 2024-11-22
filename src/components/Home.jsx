@@ -5,8 +5,8 @@ import { cartContext } from './CartContext';
 import { useContext } from 'react';
 
 export default function Home({ products }) {
-  const { search, setSearch } = useSearch(); // Access search state from context
-  const { cart, setCart } = useContext(cartContext); // Access cart state
+  const { search } = useSearch(); // Access search state from context
+  const {  setCart } = useContext(cartContext); // Access cart state
 
 //   const handleSearch = (e) => {
 //     setSearch(e.target.value.toLowerCase()); // Update search term in context
