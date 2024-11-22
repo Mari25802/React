@@ -15,7 +15,10 @@ function App() {
 
   return (
     <cartContext.Provider value={{ cart, setCart }}>
-      <BrowserRouter>
+      <BrowserRouter future={{
+    v7_startTransition: true,
+    v7_relativeSplatPath: true,
+  }}>
         {/* Wrap the SearchProvider inside the Router */}
         <SearchProvider>
           <Header products={products} cart={cart} />
